@@ -1,4 +1,6 @@
 /* Arquivos de estilização css */
+/* Importando font do Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 *{
     margin: 0;
@@ -8,6 +10,7 @@
 body {
     background-color: #e4e8ea;
     display: flex;
+    font-family: 'Montserrat';
 }
 
 .container {
@@ -22,7 +25,7 @@ body {
     box-shadow: 1px 1px 10px rgb(180, 180, 180);
     overflow: hidden;
 }
-
+/* Configurações da área do logo da ferramenta */
 .box-imagem {
     width: 50%;
     background-color: #FFF;
@@ -36,12 +39,50 @@ body {
     width: 300px;
 }
 
+/* Configurações da área da calculadora de IMC */
 .box-calculadora {
-    background-color: #aacfde;
+    background-color: #c2d1ff;
     width: 50%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    gap: 20px;
+}
+
+.titulo-calculadora {
+    font-size: 30px;
+}
+
+.label-calculadora {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.input-calculadora {
+    width: 150px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.input-calculadora:focus {
+    outline: none;
+}
+
+.btnCalcular {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+   
+    background-color: #83a2ff;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
 }
