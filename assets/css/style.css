@@ -8,21 +8,23 @@
 }
 
 body {
-    background-color: #e4e8ea;
+    background-color: #f8fcfd;
     display: flex;
     font-family: 'Montserrat';
 }
 
 .container {
+    width: 1200px;
+    height: 600px;
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
+    
     box-sizing: border-box;
-    width: 900px;
-    height: 400px;
-    display: flex;
-
     border-radius: 10px;
-    box-shadow: 1px 1px 10px rgb(180, 180, 180);
+    box-shadow: 8px 8px 8px 1px rgb(235, 235, 235);
+
+    margin: 0 auto;
+    margin-top: 50px;
     overflow: hidden;
 }
 /* Configurações da área do logo da ferramenta */
@@ -36,7 +38,7 @@ body {
 }
 
 .logo-img {
-    width: 300px;
+    width: 500px;
 }
 
 /* Configurações da área da calculadora de IMC */
@@ -48,28 +50,34 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    gap: 20px;
 }
 
 .titulo-calculadora {
-    font-size: 30px;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.orientacao-calculadora {
+    font-size: 20px;
+    margin-bottom: 40px;
 }
 
 .label-calculadora {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .input-calculadora {
-    width: 150px;
-    height: 35px;
+    width: 170px;
+    height: 40px;
     font-size: 20px;
     text-align: center;
     
     border: none;
     border-radius: 10px;
     padding: 5px;
+    margin-bottom: 25px;
 }
 
 .input-calculadora:focus {
@@ -77,12 +85,25 @@ body {
 }
 
 .btnCalcular {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     font-family: 'Montserrat';
    
     background-color: #83a2ff;
     border: none;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.valor-imc {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.descricao-imc {
+    font-size: 20px;
+    font-weight: bold;
 }
