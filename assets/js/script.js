@@ -9,7 +9,7 @@ function calcularImc() {
 
     // O "toFixed(2)" faz com que sejam exibidas apenas 2 casas decimais apos a vírgula
     const imc = (peso / (altura * altura)).toFixed(2);
-
+    
     if (peso === '' || altura === ''){
 
         // Exibe no HTML que o usuário deve preencher os camos corretamente
@@ -21,19 +21,19 @@ function calcularImc() {
         resultadoImc.innerHTML = `O seu IMC é de: ${imc}`;
         descricaoImc.innerHTML = 'Você está abaixo do peso.';
 
-    } else if (imc >= 18.5 && imc <= 24.9){
+    } else if (imc >= 18.5 && imc <= 24.99){
 
         // Exibe no HTML o resultado do IMC
         resultadoImc.innerHTML = `O seu IMC é de: ${imc}`;
         descricaoImc.innerHTML = 'Você está no seu peso ideal.';
 
-    } else if (imc >= 25.0 && imc <= 29.9){
+    } else if (imc >= 25.0 && imc <= 29.99){
 
         // Exibe no HTML o resultado do IMC
         resultadoImc.innerHTML = `O seu IMC é de: ${imc}`;
         descricaoImc.innerHTML = 'Você está em sobrepeso 1.';
 
-    } else if (imc >= 30.0 && imc <= 39.9){
+    } else if (imc >= 30.0 && imc <= 39.99){
 
         // Exibe no HTML o resultado do IMC
         resultadoImc.innerHTML = `O seu IMC é de: ${imc}`;
