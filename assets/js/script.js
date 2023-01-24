@@ -1,0 +1,1 @@
+/* Arquivo de Código Javascript */
