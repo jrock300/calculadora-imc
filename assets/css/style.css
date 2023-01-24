@@ -15,7 +15,7 @@ body {
 
 .container {
     width: 1200px;
-    height: 600px;
+    height: 650px;
     display: flex;
     justify-content: center;
     
@@ -24,9 +24,10 @@ body {
     box-shadow: 8px 8px 8px 1px rgb(235, 235, 235);
 
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
     overflow: hidden;
 }
+
 /* Configurações da área do logo da ferramenta */
 .box-imagem {
     width: 50%;
@@ -77,7 +78,7 @@ body {
     border: none;
     border-radius: 10px;
     padding: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .input-calculadora:focus {
@@ -94,7 +95,22 @@ body {
     padding: 20px;
     border-radius: 10px;
     margin-top: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.btnLimpar {
+    width: 152.28px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+   
+    background-color: #fa70ff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
     cursor: pointer;
 }
 
