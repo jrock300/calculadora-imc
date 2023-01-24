@@ -9,7 +9,7 @@ function calcularImc() {
 
     // O "toFixed(2)" faz com que sejam exibidas apenas 2 casas decimais apos a vírgula
     const imc = (peso / (altura * altura)).toFixed(2);
-    
+
     if (peso === '' || altura === ''){
 
         // Exibe no HTML que o usuário deve preencher os camos corretamente
@@ -45,4 +45,14 @@ function calcularImc() {
         resultadoImc.innerHTML = `O seu IMC é de: ${imc}`;
         descricaoImc.innerHTML = 'Você está em obesidade grau 3 ( Grave ).';
     }
+}
+
+function limparCampos(){
+    // Limpa os campos
+    document.querySelector('#peso').value = "";
+    document.querySelector('#altura').value = "";    
+
+    // Limpa os resultados
+    document.querySelector('.valor-imc').innerHTML = "-";
+    document.querySelector('.descricao-imc').innerHTML = "-";
 }
