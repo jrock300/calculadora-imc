@@ -1,5 +1,15 @@
 /* Arquivo de Código Javascript */
 
+function limparCampos(){
+    // Limpa os campos
+    document.querySelector('#peso').value = "";
+    document.querySelector('#altura').value = "";    
+
+    // Limpa os resultados
+    document.querySelector('.valor-imc').innerHTML = "-";
+    document.querySelector('.descricao-imc').innerHTML = "-";
+}
+
 function calcularImc() {
     const peso = document.querySelector('#peso').value;
     const altura = document.querySelector('#altura').value;
@@ -45,14 +55,4 @@ function calcularImc() {
         resultadoImc.innerHTML = `O seu IMC é de: ${imc}`;
         descricaoImc.innerHTML = 'Você está em obesidade grau 3 ( Grave ).';
     }
-}
-
-function limparCampos(){
-    // Limpa os campos
-    document.querySelector('#peso').value = "";
-    document.querySelector('#altura').value = "";    
-
-    // Limpa os resultados
-    document.querySelector('.valor-imc').innerHTML = "-";
-    document.querySelector('.descricao-imc').innerHTML = "-";
 }
