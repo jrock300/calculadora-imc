@@ -1,127 +1,197 @@
-/* Arquivos de estilização css */
 /* Importando font do Google Fonts*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://googleapis.com");
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Garante que padding não quebre a largura */
 }
 
 body {
   background-color: #f8fcfd;
   display: flex;
-  font-family: "Montserrat";
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .container {
-  width: 1200px;
-  height: 650px;
+  width: 100%;
+  max-width: 1100px; /* Largura máxima para desktop */
+  min-height: 600px;
   display: flex;
-  justify-content: center;
-
-  box-sizing: border-box;
-  border-radius: 10px;
-  box-shadow: 8px 8px 8px 1px rgb(235, 235, 235);
-
-  margin: 0 auto;
-  margin-top: 30px;
+  flex-direction: row; /* Lado a lado por padrão */
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
-/* Configurações da área do logo da ferramenta */
+/* Área da Imagem/Logo */
 .box-imagem {
   width: 50%;
   background-color: #fff;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 40px;
 }
 
 .logo-img {
-  width: 500px;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
 }
 
-/* Configurações da área da calculadora de IMC */
+/* Área da Calculadora */
 .box-calculadora {
   background-color: #c2d1ff;
   width: 50%;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 40px;
 }
 
 .titulo-calculadora {
-  font-size: 35px;
-  margin-bottom: 30px;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .orientacao-calculadora {
-  font-size: 20px;
-  margin-bottom: 40px;
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .label-calculadora {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .input-calculadora {
-  width: 170px;
-  height: 40px;
+  width: 100%;
+  max-width: 200px;
+  height: 45px;
   font-size: 20px;
   text-align: center;
-
   border: none;
   border-radius: 10px;
+  margin-bottom: 20px;
   padding: 5px;
-  margin-bottom: 15px;
 }
 
 .input-calculadora:focus {
-  outline: none;
+  outline: 2px solid #83a2ff;
 }
 
 .btnCalcular {
+  width: 100%;
+  max-width: 200px;
   font-size: 18px;
   font-weight: bold;
   font-family: "Montserrat";
-
   background-color: #83a2ff;
+  color: white;
   border: none;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   margin-top: 10px;
-  margin-bottom: 0px;
   cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btnCalcular:active {
+  transform: scale(0.98);
 }
 
 .btnLimpar {
-  width: 152.28px;
-  font-size: 18px;
+  width: 100%;
+  max-width: 200px;
+  font-size: 16px;
   font-weight: bold;
   font-family: "Montserrat";
-
   background-color: #fa70ff;
+  color: white;
   border: none;
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
 .valor-imc {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
-
-  margin-bottom: 10px;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .descricao-imc {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* =============================================
+   RESPONSIVIDADE (Tablets e Smartphones)
+   ============================================= */
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .box-imagem,
+  .box-calculadora {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .box-imagem {
+    background-color: #fff;
+  }
+
+  .logo-img {
+    max-width: 200px;
+  }
+
+  .titulo-calculadora {
+    font-size: 26px;
+  }
+
+  .orientacao-calculadora {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .titulo-calculadora {
+    font-size: 22px;
+  }
+
+  .btnCalcular,
+  .btnLimpar,
+  .input-calculadora {
+    max-width: 100%;
+  }
 }
