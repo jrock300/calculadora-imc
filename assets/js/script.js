@@ -4,21 +4,21 @@
 const peso = document.querySelector("#peso");
 const altura = document.querySelector("#altura");
 const valorImc = document.querySelector(".valor-imc");
-const descicaoImc = document.querySelector(".descricao-imc");
+const descricaoImc = document.querySelector(".descricao-imc");
 const btnCalcular = document.querySelector("#btnCalcular");
 const btnLimpar = document.querySelector("#btnLimpar");
 
 /* Arquivo de Código Javascript */
 
-function limparCampos() {
+const limparCampos = () => {
   // Limpa os campos
-  document.querySelector("#peso").value = "";
-  document.querySelector("#altura").value = "";
+  peso.value = "";
+  altura.value = "";
 
   // Limpa os resultados
-  document.querySelector(".valor-imc").innerHTML = "-";
-  document.querySelector(".descricao-imc").innerHTML = "-";
-}
+  valorImc.textContent = "-";
+  descricaoImc.textContent = "-";
+};
 
 function calcularImc() {
   const peso = document.querySelector("#peso").value;
@@ -56,6 +56,5 @@ function calcularImc() {
 }
 
 // Event listener dos botões
-
 btnLimpar.addEventListener("click", limparCampos);
 btnCalcular.addEventListener("click", calcularImc);
