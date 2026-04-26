@@ -34,7 +34,7 @@ const validaDados = (peso, altura) => {
   }
 
   if (!altura || isNaN(altura) || altura <= 0) {
-    descricaoImc.textContent = "Digite um peso válido.";
+    descricaoImc.textContent = "Digite uma altura válida.";
     return false;
   }
   return true;
@@ -51,27 +51,27 @@ const classificaIMC = (imc) => {
   const classificacoes = [
     {
       limite: 18.5,
-      descricao: `O seu IMC é ${imc.toFixed(2)}, você está ABAIXO DO PESO.`,
+      descricao: `você está ABAIXO DO PESO.`,
     },
     {
       limite: 25,
-      descricao: `O seu IMC é ${imc.toFixed(2)}, você está no PESO IDEAL.`,
+      descricao: `você está no PESO IDEAL.`,
     },
     {
       limite: 30,
-      descricao: `O seu IMC é ${imc.toFixed(2)}, você está em SOBREPESO.`,
+      descricao: `você está em SOBREPESO.`,
     },
     {
       limite: 35,
-      descricao: `O seu IMC é ${imc.toFixed(2)}, você está em OBESIDADE GRAU 1.`,
+      descricao: `você está em OBESIDADE GRAU 1.`,
     },
     {
       limite: 40,
-      descricao: `O seu IMC é ${imc.toFixed(2)}, você está em OBESIDADE GRAU 2.`,
+      descricao: `você está em OBESIDADE GRAU 2.`,
     },
     {
       limite: Infinity,
-      descricao: `O seu IMC é ${imc.toFixed(2)}, você está em OBESIDADE GRAU 3.`,
+      descricao: `você está em OBESIDADE GRAU 3.`,
     },
   ];
 
@@ -83,9 +83,21 @@ const classificaIMC = (imc) => {
 };
 
 // Exibe Resultado
-const exibeResultado = (imc) => {
-  valorImc.textContent = imc.limite;
-  descricaoImc.textContent = imc.descricao;
+const exibeResultado = (imc, descricao) => {
+  valorImc.textContent = `Seu IMC é ${imc.toFixed(2)}`;
+  descricaoImc.textContent = descricao.descricao;
+};
+
+// Função que executa o fluxo
+const executar = () => {
+  const dados = lerDados();
+  if (!validaDados(dados.uPeso, dados.uAlt)) {
+    valorImc.textContent = "-";
+    return;
+  }
+  const imcCalc = calcularIMC(dados.uPeso, dados.uAlt);
+  const resultadoIMC = classificaIMC(imcCalc);
+  exibeResultado(imcCalc, resultadoIMC);
 };
 
 // Event listener dos botões
