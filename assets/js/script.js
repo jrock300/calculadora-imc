@@ -85,7 +85,7 @@ const classificaIMC = (imc) => {
 // Exibe Resultado
 const exibeResultado = (imc) => {
   valorImc.textContent = imc.limite;
-  descricaoImc = imc.descricao;
+  descricaoImc.textContent = imc.descricao;
 };
 
 // Event listener dos botões
