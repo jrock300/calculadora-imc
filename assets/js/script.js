@@ -8,6 +8,7 @@ const descricaoImc = document.querySelector(".descricao-imc");
 const btnCalcular = document.querySelector("#btnCalcular");
 const btnLimpar = document.querySelector("#btnLimpar");
 
+// Limpa Campos
 const limparCampos = () => {
   // Limpa os campos
   peso.value = "";
@@ -16,6 +17,13 @@ const limparCampos = () => {
   // Limpa os resultados
   valorImc.textContent = "-";
   descricaoImc.textContent = "-";
+};
+
+// Ler Dados
+const lerDados = () => {
+  uPeso = Number(peso.value);
+  uAlt = Number(altura.value);
+  return { uPeso, uAlt };
 };
 
 // Calcula IMC
