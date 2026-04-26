@@ -54,3 +54,8 @@ function calcularImc() {
     descricaoImc.innerHTML = "Você está em obesidade grau 3 ( Grave ).";
   }
 }
+
+// Event listener dos botões
+
+btnLimpar.addEventListener("click", limparCampos);
+btnCalcular.addEventListener("click", calcularImc);
