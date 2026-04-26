@@ -77,9 +77,15 @@ const classificaIMC = (imc) => {
 
   for (let classificacao of classificacoes) {
     if (imc < classificacao.limite) {
-      return classificacao.descricao;
+      return classificacao;
     }
   }
+};
+
+// Exibe Resultado
+const exibeResultado = (imc) => {
+  valorImc.textContent = imc.limite;
+  descricaoImc = imc.descricao;
 };
 
 // Event listener dos botões
