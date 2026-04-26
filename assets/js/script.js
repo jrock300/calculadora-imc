@@ -46,6 +46,46 @@ const calcularIMC = (peso, altura) => {
   return imc;
 };
 
+// Classifica o IMC
+const classificaIMC = (imc) => {
+  const classificacoes = [
+    {
+      limite: 18.5,
+      descricao: `O seu IMC é ${imc.toFixed(2)}, você está ABAIXO DO PESO.`,
+    },
+    {
+      limite: 25,
+      descricao: `O seu IMC é ${imc.toFixed(2)}, você está no PESO IDEAL.`,
+    },
+    {
+      limite: 30,
+      descricao: `O seu IMC é ${imc.toFixed(2)}, você está em SOBREPESO.`,
+    },
+    {
+      limite: 35,
+      descricao: `O seu IMC é ${imc.toFixed(2)}, você está em OBESIDADE GRAU 1.`,
+    },
+    {
+      limite: 40,
+      descricao: `O seu IMC é ${imc.toFixed(2)}, você está em OBESIDADE GRAU 2.`,
+    },
+    {
+      limite: Infinity,
+      descricao: `O seu IMC é ${imc.toFixed(2)}, você está em OBESIDADE GRAU 3.`,
+    },
+  ];
+
+  for (let classificacao of classificacoes) {
+    if (imc < classificacao.limite) {
+      return classificacao.descricao;
+    }
+  }
+};
+
+// Event listener dos botões
+btnLimpar.addEventListener("click", limparCampos);
+btnCalcular.addEventListener("click", calcularIMC);
+
 // function calcularImc() {
 //   const peso = document.querySelector("#peso").value;
 //   const altura = document.querySelector("#altura").value;
@@ -80,7 +120,3 @@ const calcularIMC = (peso, altura) => {
 //     descricaoImc.innerHTML = "Você está em obesidade grau 3 ( Grave ).";
 //   }
 // }
-
-// Event listener dos botões
-btnLimpar.addEventListener("click", limparCampos);
-btnCalcular.addEventListener("click", calcularIMC);
