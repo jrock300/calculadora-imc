@@ -1,127 +1,127 @@
 /* Arquivos de estilização css */
 /* Importando font do Google Fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #f8fcfd;
-    display: flex;
-    font-family: 'Montserrat';
+  background-color: #f8fcfd;
+  display: flex;
+  font-family: "Montserrat";
 }
 
 .container {
-    width: 1200px;
-    height: 650px;
-    display: flex;
-    justify-content: center;
-    
-    box-sizing: border-box;
-    border-radius: 10px;
-    box-shadow: 8px 8px 8px 1px rgb(235, 235, 235);
+  width: 1200px;
+  height: 650px;
+  display: flex;
+  justify-content: center;
 
-    margin: 0 auto;
-    margin-top: 30px;
-    overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px 1px rgb(235, 235, 235);
+
+  margin: 0 auto;
+  margin-top: 30px;
+  overflow: hidden;
 }
 
 /* Configurações da área do logo da ferramenta */
 .box-imagem {
-    width: 50%;
-    background-color: #FFF;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  width: 50%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-img {
-    width: 500px;
+  width: 500px;
 }
 
 /* Configurações da área da calculadora de IMC */
 .box-calculadora {
-    background-color: #c2d1ff;
-    width: 50%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background-color: #c2d1ff;
+  width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .titulo-calculadora {
-    font-size: 35px;
-    margin-bottom: 30px;
+  font-size: 35px;
+  margin-bottom: 30px;
 }
 
 .orientacao-calculadora {
-    font-size: 20px;
-    margin-bottom: 40px;
+  font-size: 20px;
+  margin-bottom: 40px;
 }
 
 .label-calculadora {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .input-calculadora {
-    width: 170px;
-    height: 40px;
-    font-size: 20px;
-    text-align: center;
-    
-    border: none;
-    border-radius: 10px;
-    padding: 5px;
-    margin-bottom: 15px;
+  width: 170px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 15px;
 }
 
 .input-calculadora:focus {
-    outline: none;
+  outline: none;
 }
 
 .btnCalcular {
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Montserrat';
-   
-    background-color: #83a2ff;
-    border: none;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Montserrat";
+
+  background-color: #83a2ff;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  cursor: pointer;
 }
 
 .btnLimpar {
-    width: 152.28px;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Montserrat';
-   
-    background-color: #fa70ff;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    cursor: pointer;
+  width: 152.28px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Montserrat";
+
+  background-color: #fa70ff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .valor-imc {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .descricao-imc {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
