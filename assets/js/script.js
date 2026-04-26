@@ -21,8 +21,8 @@ const limparCampos = () => {
 
 // Ler Dados
 const lerDados = () => {
-  uPeso = Number(peso.value);
-  uAlt = Number(altura.value);
+  uPeso = Number(peso.value.replace(",", "."));
+  uAlt = Number(altura.value.replace(",", "."));
   return { uPeso, uAlt };
 };
 
