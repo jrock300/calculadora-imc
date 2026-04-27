@@ -18,6 +18,3 @@ Implementado conceito de Single Responsability no JS
 <br>
 Aplicação responsiva
 <br>
-> Melhorias futuras:
-<br>
-Ajustar a responsividade.
